@@ -1,0 +1,67 @@
+unit uMain;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, clsBankClient;
+
+type
+  TfrmTheBank = class(TForm)
+    Label1: TLabel;
+    Label3: TLabel;
+    btnInitialize: TButton;
+    btnUpdate: TButton;
+    lblOutput: TLabel;
+    btnDisplay: TButton;
+    txtFirstName: TEdit;
+    txtSurname: TEdit;
+    txtAccountNumber: TEdit;
+    memoDisplay: TMemo;
+    procedure btnInitializeClick(Sender: TObject);
+    procedure btnUpdateClick(Sender: TObject);
+    procedure btnDisplayClick(Sender: TObject);
+  private
+    { Private declarations }
+    FClient: clsBankClient.TBankClient;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmTheBank: TfrmTheBank;
+
+implementation
+
+{$R *.dfm}
+
+
+
+procedure TfrmTheBank.btnInitializeClick(Sender: TObject);
+begin
+                       // Create a new TBankClient object with the values entered in the Edit controls
+  FClient := TBankClient.Create(txtFirstName.Text, txtSurname.Text,
+    txtAccountNumber.Text);
+    memoDisplay.Clear;
+end;
+
+procedure TfrmTheBank.btnUpdateClick(Sender: TObject);
+begin
+// Update the account number of the current TBankClient object with the value entered in the Edit control
+  if Assigned(FClient) then
+  begin
+    FClient.SetClientAccountNumber(txtAccountNumber.Text);
+  end;
+end;
+procedure TfrmTheBank.btnDisplayClick(Sender: TObject);
+begin
+ // Display the current TBankClient object's full name and account number in the Memo control
+  if Assigned(FClient) then
+  begin
+    memoDisplay.Lines.Add('Full Client Details');
+    memoDisplay.Lines.Add(FClient.ToString);
+  end;
+end;
+end.
+
+

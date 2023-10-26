@@ -1,0 +1,134 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 457
+  ClientWidth = 852
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 64
+    Top = 56
+    Width = 587
+    Height = 23
+    Caption = 'This Program Inserts a Surname in an array of 10 random surnames'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 488
+    Top = 147
+    Width = 213
+    Height = 15
+    Caption = 'Array after inserting a new Surname '
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Leelawadee'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblOutput: TLabel
+    Left = 64
+    Top = 376
+    Width = 5
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Roboto'
+    Font.Style = []
+    ParentFont = False
+  end
+  object btnInitialize: TButton
+    Left = 24
+    Top = 147
+    Width = 153
+    Height = 70
+    Caption = 'Initialize'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Verdana'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object btnUpdate: TButton
+    Left = 24
+    Top = 251
+    Width = 153
+    Height = 70
+    Caption = 'Update Account'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Verdana'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    WordWrap = True
+  end
+  object btnDisplay: TButton
+    Left = 24
+    Top = 355
+    Width = 153
+    Height = 78
+    Caption = 'Display full details'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Verdana'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    WordWrap = True
+  end
+  object txtFirstName: TEdit
+    Left = 264
+    Top = 169
+    Width = 201
+    Height = 31
+    TabOrder = 3
+  end
+  object txtSurname: TEdit
+    Left = 264
+    Top = 204
+    Width = 201
+    Height = 31
+    TabOrder = 4
+  end
+  object txtAccountNumber: TEdit
+    Left = 264
+    Top = 241
+    Width = 201
+    Height = 31
+    TabOrder = 5
+  end
+  object memoDisplay: TMemo
+    Left = 600
+    Top = 251
+    Width = 209
+    Height = 177
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial Rounded MT Bold'
+    Font.Style = []
+    Lines.Strings = (
+      'Memo1')
+    ParentFont = False
+    TabOrder = 6
+  end
+end
